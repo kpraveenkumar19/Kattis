@@ -32,3 +32,5 @@ int main() {
     }
     cout << throws << endl;
 }
+// check wethear an arrow is flowing in that height if yes then dont create arrow just flow that arrow at height H-1 else create an arrow which at that H
+// and later flows at height H-1 and count array maintains the details of all the arrow flowing at present!
