@@ -10,18 +10,18 @@ int main() {
     int n;
     cin >> n;
 
-    vector<int> counts;
+    vector<int> counts;//counts the number of arrows flowing at height h
     counts.resize(1000001, 0);
 
     for(int i = 0; i < n; i++) {
         int temp;
         cin >> temp;
 
-        if(counts[temp] == 0) {
-            counts[temp-1]++;
+        if(counts[temp] == 0) {//no arrow flowing in that height
+            counts[temp-1]++;//creating a new arrow at this height it hits that and moves in a height less than that 
         }
-        else {
-            counts[temp-1]++;
+        else {//an arrow flowing in that height
+            counts[temp-1]++;//arrow hits and flows in aheight below that
             counts[temp]--;
         }
     }
