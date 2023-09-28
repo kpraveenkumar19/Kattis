@@ -13,7 +13,7 @@ int main() {
     int n, m;//n denotes total req to be coming and m denotes number of reqs handled  by one server per sec
     cin >> n >> m;
 
-    unordered_map<int,int> seen;// seen maps the chronolgical time with the number of reqs at that chronolgical time
+     vector<int> seen(100005,0);// seen maps the chronolgical time with the number of reqs at that chronolgical time
     for(int i = 0; i < n; i++) {
         int temp;
         cin >> temp;
