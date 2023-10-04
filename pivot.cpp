@@ -37,7 +37,7 @@ int main() {
     if(v[0] < c_min[1]) {
         total++;
     }
-    if(v[n-1] > c_min[n-2]) {
+    if(v[n-1] > c_max[n-2]) {
         total++;
     }
 
