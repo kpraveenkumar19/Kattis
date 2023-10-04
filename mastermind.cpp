@@ -12,7 +12,7 @@ int main() {
     string code, guess;
     cin >> code >> guess;
 
-    string codeleft, guessleft;
+    int codeR[26];guessR[26];
 
     int r = 0, s = 0;
     for(int i = 0; i < n; i++) {
@@ -20,19 +20,11 @@ int main() {
             r++;
         }
         else {
-            codeleft.push_back(code[i]);
-            guessleft.push_back(guess[i]);
+            codeR[code[i]-65]++;guessR[guess[i]-65]++;
         }
     }
 
-    while(!codeleft.empty()) {
-        int index = guessleft.find(codeleft[0]);
-        if(index >= 0) {
-            s++;
-            guessleft.erase(guessleft.begin()+index);
-        }
-        codeleft.erase(codeleft.begin());
-    }
+    for(int i=0;i<26;i++) s+=min(codeR[i],guessR[i]);
 
     cout << r << " " << s << endl;
 }
